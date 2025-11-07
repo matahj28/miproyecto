@@ -3,7 +3,7 @@ USE miproyectodb;
 
 CREATE TABLE IF NOT EXISTS usuarios
 (
-    id_usuario INT         NOT NULL,
+    id_usuario INT         NOT NULL AUTO_INCREMENT,
     nombre     VARCHAR(45) NOT NULL,
     telefono   VARCHAR(45) NOT NULL,
     correo     VARCHAR(45) NOT NULL,
@@ -12,13 +12,11 @@ CREATE TABLE IF NOT EXISTS usuarios
 )
     ENGINE = InnoDB;
 
-insert into usuarios(id_usuario,
-                     nombre,
+insert into usuarios(nombre,
                      telefono,
                      correo,
                      password)
-values (1,
-        'Jorge M',
+values ('Jorge M',
         '1234567890',
         'jorge@correo.com',
         '1234');

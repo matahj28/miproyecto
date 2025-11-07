@@ -6,9 +6,11 @@ import jakarta.persistence.*;
 @Table(name = "usuarios")
 public class Usuario {
     @Id
-    private Long id_usuario;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id_usuario;
     private String nombre;
     private String telefono;
+    @Column(name = "correo", nullable = false, length = 50, unique = true)
     private String correo;
     private String password;
 
